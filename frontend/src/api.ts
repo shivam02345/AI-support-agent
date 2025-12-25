@@ -1,10 +1,10 @@
-const API_URL = "http://localhost:4000/chat";
+const API_BASE = "https://ai-support-agent-dl3b.onrender.com";
 
 export async function sendMessage(
   message: string,
   sessionId?: string
 ) {
-  const res = await fetch(`${API_URL}/message`, {
+  const res = await fetch(`${API_BASE}/chat/message`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -13,20 +13,20 @@ export async function sendMessage(
   });
 
   if (!res.ok) {
-    throw new Error("Failed to send message");
+    throw new Error("API request failed");
   }
 
   return res.json();
 }
+
 export async function fetchChatHistory(sessionId: string) {
-    const res = await fetch(
-      `http://localhost:4000/chat/history/${sessionId}`
-    );
-  
-    if (!res.ok) {
-      throw new Error("Failed to fetch chat history");
-    }
-  
-    return res.json();
+  const res = await fetch(
+    `${API_BASE}/chat/history/${sessionId}`
+  );
+
+  if (!res.ok) {
+    throw new Error("History fetch failed");
   }
-  
+
+  return res.json();
+}
