@@ -123,36 +123,35 @@ PostgreSQL database (Render) with the following schema:
 - Deployed on **Render**
 
 ---
-
 ## 📂 Project Structure
+
+```text
 AI-support-agent/
 ├── backend/
-│ ├── src/
-│ │ ├── routes/
-│ │ │ └── chat.routes.ts
-│ │ ├── services/
-│ │ │ └── llm.service.ts
-│ │ ├── db/
-│ │ │ └── pool.ts
-│ │ ├── app.ts
-│ │ └── server.ts
-│ ├── package.json
-│ └── tsconfig.json
+│   ├── src/
+│   │   ├── routes/
+│   │   │   └── chat.routes.ts
+│   │   ├── services/
+│   │   │   └── llm.service.ts
+│   │   ├── db/
+│   │   │   └── pool.ts
+│   │   ├── app.ts
+│   │   └── server.ts
+│   ├── package.json
+│   └── tsconfig.json
 │
 ├── frontend/
-│ ├── src/
-│ │ ├── api/
-│ │ │ └── chatApi.ts
-│ │ ├── components/
-│ │ │ └── Chat.tsx
-│ │ ├── App.tsx
-│ │ └── main.tsx
-│ ├── package.json
-│ └── vite.config.ts
+│   ├── src/
+│   │   ├── api/
+│   │   │   └── chatApi.ts
+│   │   ├── components/
+│   │   │   └── Chat.tsx
+│   │   ├── App.tsx
+│   │   └── main.tsx
+│   ├── package.json
+│   └── vite.config.ts
 │
 └── README.md
-
----
 
 ## 🏃‍♂️ Running Locally (Step-by-Step)
 
